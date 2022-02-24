@@ -11,7 +11,8 @@ const {albumNum}=useContext(Context)
             <div className="search-and-album">
                <SearchBar/>
                
-<AlbumList/><p className="current-album">Album number {albumNum}</p>
+<AlbumList/>{ albumNum!==-1&&
+    <p className="current-album">Album number {albumNum}</p>}
             </div>
             
         </div>

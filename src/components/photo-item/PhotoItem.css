@@ -3,13 +3,12 @@
     background: rgb(37,72,100);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    
     align-items: center;
-    text-align: center;
+    max-width: 300px;
     padding: 0.3em;
-    height:fit-content;
-    width: fit-content;
-    box-shadow:5px 5px 6px 1px rgb(16, 39, 59);
+    text-align: center;
+    box-shadow:4px 4px 6px 1px rgb(16, 39, 59);
   }
 
   .photo-item-top  {
@@ -23,6 +22,9 @@
     .photo-item-bottom{
         background:rgb(24,50,70);
         width: 95%;
+        white-space: nowrap;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
         padding: 0.5em;
         font-size: 0.8rem;
         text-align: left;

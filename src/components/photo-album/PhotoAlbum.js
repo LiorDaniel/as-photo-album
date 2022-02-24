@@ -16,15 +16,8 @@ useEffect(()=>{
     setCurrent([])
     setHasMore(true)
     if(setAlbumNum!==-1){
-
-    
- 
-            
             setCurrent(presentedPhotos.slice(0, 10))
-            
             console.log("count is "+count.prev+" "+count.next )
-            
-       
     }
 },[presentedPhotos])
 
@@ -42,6 +35,9 @@ useEffect(()=>{
   }
 
   return (
+      
+          presentedPhotos.length>0&&
+      
     <InfiniteScroll
       dataLength={current.length}
       next={getMoreData}
