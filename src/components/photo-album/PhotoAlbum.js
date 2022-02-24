@@ -4,7 +4,7 @@ import PhotoItem from '../photo-item/PhotoItem';
 import './PhotoAlbum.css';
 import {Context} from "./../../Context"
 function PhotoAlbum() {
-    const {fetchPhotos,presentedPhotos} =useContext(Context)
+    const {fetchPhotos,presentedPhotos,albumNum,setAlbumNum} =useContext(Context)
   const [count, setCount] = useState({
     prev: 0,
     next: 10
@@ -12,12 +12,19 @@ function PhotoAlbum() {
   const [hasMore, setHasMore] = useState(true);
   const [current, setCurrent] = useState([])
 useEffect(()=>{
-    fetch(`https://jsonplaceholder.typicode.com/photos?albumId=1`)
+    fetch(`https://jsonplaceholder.typicode.com/photos?albumId=${albumNum}`)
         .then(res=>res.json())
         .then(data=>{
             setCurrent(data.slice(count.prev, count.next))
         })
-},[])
+        return ()=>{
+            setCurrent([])
+            setCount({prev:0,next:10})
+            
+        }
+},[albumNum])
+
+
   const getMoreData = () => {
     if (current.length === presentedPhotos.length) {
       setHasMore(false);
