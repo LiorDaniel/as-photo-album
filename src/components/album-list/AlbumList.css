@@ -1,0 +1,44 @@
+.select-album-list{
+    width: 100px;
+  display: flex;
+  height: 40%;
+  flex-direction: column;
+
+}
+
+.select-album-list > button {
+  background-color: rgb(24,51,70);
+  text-align: center;
+  padding: 0.6em;
+  border: 2px solid rgb(101,131,156);
+ 
+  border-radius: 3px;
+  color:rgb(101,131,156);
+  
+}
+.list-item{
+    width: 100%;
+    padding: 0.5em 1em;
+    box-sizing: border-box;
+    text-align: left;
+    border: 0.6px solid rgb(101,131,156);
+    border-bottom: none;
+    border-top: none;
+    cursor: pointer;
+    background: rgb(24,51,70);
+    color:rgb(101,131,156);
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+}
+
+.list-item:hover{
+  background: rgb(34, 70, 95);
+}
+.list-item:first-of-type{
+  border-top: 0.6px solid rgb(101,131,156);
+}
+
+.list-item:last-of-type{
+  border-bottom: 0.6px solid rgb(101,131,156);
+}
