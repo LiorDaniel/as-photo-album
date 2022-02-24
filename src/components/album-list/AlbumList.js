@@ -37,7 +37,7 @@ useEffect(() => {
   )
   return (
     <div className='select-album-list' ref={ref}>
-      <button className='select-album-list-button' onClick={toggle}>select album</button>
+      <button className='select-album-list-button' onClick={()=>{toggle();setAlbumNum(-1);}}>select album</button>
     {
       isOpen&&
       <List

@@ -12,17 +12,21 @@ function PhotoAlbum() {
   const [hasMore, setHasMore] = useState(true);
   const [current, setCurrent] = useState([])
 useEffect(()=>{
-    fetch(`https://jsonplaceholder.typicode.com/photos?albumId=${albumNum}`)
-        .then(res=>res.json())
-        .then(data=>{
-            setCurrent(data.slice(count.prev, count.next))
-        })
-        return ()=>{
-            setCurrent([])
-            setCount({prev:0,next:10})
+    setCount({prev:0,next:10})
+    setCurrent([])
+    setHasMore(true)
+    if(setAlbumNum!==-1){
+
+    
+ 
             
-        }
-},[albumNum])
+            setCurrent(presentedPhotos.slice(0, 10))
+            
+            console.log("count is "+count.prev+" "+count.next )
+            
+       
+    }
+},[presentedPhotos])
 
 
   const getMoreData = () => {
@@ -32,6 +36,7 @@ useEffect(()=>{
     }
     setTimeout(() => {
       setCurrent(current.concat(presentedPhotos.slice(count.prev + 10, count.next + 10)))
+      console.log(albumNum)
     }, 2000)
     setCount((prevState) => ({ prev: prevState.prev + 10, next: prevState.next + 10 }))
   }
@@ -45,7 +50,7 @@ useEffect(()=>{
     >
       <div className='grid'>
         {current && current.map(((item, index) => (
-         <PhotoItem photo={item}/>
+         <PhotoItem photo={item} key={index}/>
         )))
         }
       </div>

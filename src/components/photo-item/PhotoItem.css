@@ -43,11 +43,11 @@
     }
     .photo-title{
         display: inline-block;
-        width: 180px;
+        width: 214px;
         white-space: nowrap;
         overflow: hidden !important;
         text-overflow: ellipsis;
         color:white;
         font-weight: 500;
-        font-size: 1rem;
+        font-size: 1.1rem;
     }

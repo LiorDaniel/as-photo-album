@@ -14,7 +14,10 @@ function ContextProvider({children}){
     }
 
     
-   
+    useEffect(()=>{
+      fetchPhotos()
+    
+    },[albumNum])
    
  
     return(
