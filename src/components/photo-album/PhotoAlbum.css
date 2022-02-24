@@ -24,3 +24,31 @@
   width: 97%;
   
   }
+
+  .loader{
+display: flex;
+width: 5%;
+justify-content: space-between;
+margin: 0 auto;
+margin-bottom: 1em;
+  }
+
+  .dot{
+    width:10px;
+    height: 10px;
+    background: rgb(16, 39, 59);
+    border-radius: 50%;
+    animation:  glowDot 2s infinite ;
+  }
+
+  @keyframes glowDot {
+    0%{
+      background: rgb(7, 20, 32);
+    }
+    50%{
+      background: rgb(49, 96, 138);
+    }
+    100%{
+      background: rgb(7, 20, 32);
+    }
+  }

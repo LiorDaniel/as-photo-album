@@ -41,7 +41,7 @@ useEffect(()=>{
       dataLength={current.length}
       next={getMoreData}
       hasMore={hasMore}
-      loader={<h4>Loading...</h4>}
+      loader={<div className='loader'><div className='dot'></div> <div  className='dot'></div> <div  className='dot'></div></div>}
     >
       <div className='grid'>
         {current && current.map(((item, index) => (
