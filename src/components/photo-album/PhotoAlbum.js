@@ -1,17 +1,23 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import PhotoItem from '../photo-item/PhotoItem';
 import './PhotoAlbum.css';
 import {Context} from "./../../Context"
 function PhotoAlbum() {
-    const {presentedPhotos} =useContext(Context)
+    const {fetchPhotos,presentedPhotos} =useContext(Context)
   const [count, setCount] = useState({
     prev: 0,
     next: 10
   })
   const [hasMore, setHasMore] = useState(true);
-  const [current, setCurrent] = useState(presentedPhotos.slice(count.prev, count.next))
-
+  const [current, setCurrent] = useState([])
+useEffect(()=>{
+    fetch(`https://jsonplaceholder.typicode.com/photos?albumId=1`)
+        .then(res=>res.json())
+        .then(data=>{
+            setCurrent(data.slice(count.prev, count.next))
+        })
+},[])
   const getMoreData = () => {
     if (current.length === presentedPhotos.length) {
       setHasMore(false);
