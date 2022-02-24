@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../../Context";
-
+import "./SearchBar.css"
 function SearchBar(){
     const {presentedPhotos,setPresentedPhotos,fetchPhotos,albumNum}=useContext(Context)
 const [search,setSearch] =useState("")
