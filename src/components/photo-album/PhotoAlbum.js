@@ -1,24 +1,24 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import PhotoItem from '../photo-item/PhotoItem';
 import './PhotoAlbum.css';
-
+import {Context} from "./../../Context"
 function PhotoAlbum() {
-  const data = new Array(50).fill().map((value, id) => ((id)))
-
+    const {presentedPhotos} =useContext(Context)
   const [count, setCount] = useState({
     prev: 0,
     next: 10
   })
   const [hasMore, setHasMore] = useState(true);
-  const [current, setCurrent] = useState(data.slice(count.prev, count.next))
+  const [current, setCurrent] = useState(presentedPhotos.slice(count.prev, count.next))
 
   const getMoreData = () => {
-    if (current.length === data.length) {
+    if (current.length === presentedPhotos.length) {
       setHasMore(false);
       return;
     }
     setTimeout(() => {
-      setCurrent(current.concat(data.slice(count.prev + 10, count.next + 10)))
+      setCurrent(current.concat(presentedPhotos.slice(count.prev + 10, count.next + 10)))
     }, 2000)
     setCount((prevState) => ({ prev: prevState.prev + 10, next: prevState.next + 10 }))
   }
@@ -32,9 +32,7 @@ function PhotoAlbum() {
     >
       <div className='grid'>
         {current && current.map(((item, index) => (
-          <div key={index} className="post">
-            {item}
-          </div>
+         <PhotoItem photo={item}/>
         )))
         }
       </div>

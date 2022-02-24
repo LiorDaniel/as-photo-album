@@ -14,11 +14,14 @@
   
   .grid{
     display: grid;
-    grid-template-columns: 200px  200px  200px 200px ;
-    gap: 1em;
-    margin: 0 auto;
-  margin-left: 1em;
+    grid-template-columns: 1fr  1fr  1fr 1fr ;
+
   position: absolute;
   
-  top: 30%;
+  top: 20%;
+  left:50%;
+  transform: translate(-50%,0);
+  gap:1em;
+  width: 97%;
+  
   }
