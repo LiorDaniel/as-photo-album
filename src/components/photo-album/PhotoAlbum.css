@@ -16,11 +16,10 @@
     display: grid;
     grid-template-columns: 1fr  1fr  1fr 1fr ;
 
-  position: absolute;
+ 
   
-  top: 20%;
-  left:50%;
-  transform: translate(-50%,0);
+  
+  margin: 10% auto 1em;
   gap:1em;
   width: 97%;
   

@@ -7,8 +7,9 @@
     align-items: center;
     text-align: center;
     padding: 0.3em;
-    height:150px;
-    
+    height:fit-content;
+    width: fit-content;
+    box-shadow:5px 5px 6px 1px rgb(16, 39, 59);
   }
 
   .photo-item-top  {
@@ -21,7 +22,7 @@
     
     .photo-item-bottom{
         background:rgb(24,50,70);
-        width: 100%;
+        width: 95%;
         padding: 0.5em;
         font-size: 0.8rem;
         text-align: left;
