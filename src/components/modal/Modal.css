@@ -1,56 +1,52 @@
-/* The Modal (background) */
 .modal {
-    /* Hidden by default */
-   position: fixed; /* Stay in place */
-   z-index: 1; /* Sit on top */
-   left: 0;
-   top: 0;
-   width: 100%; /* Full width */
-   height: 100%; /* Full height */
-    /* Enable scroll if needed */
-   background-color: rgb(0,0,0); /* Fallback color */
-   background-color: rgba(0, 0, 0, 0.555); /* Black w/ opacity */
- }
- 
- /* Modal Content/Box */
- .modal-content {
-   background-color: #fefefe;
-   margin: 15% auto; /* 15% from the top and centered */
-   padding: 20px;
-   border: 1px solid #888;
-   width: 40%; /* Could be more or less, depending on screen size */
-   display: flex;
-   text-align: left;
- }
- 
- .modal-content > img {
-     width: 30%;
- }
- /* The Close Button */
- .close {
-   color: #aaa;
-   float: right;
-   font-size: 28px;
-   font-weight: bold;
-   transition: color 0.2s;
- }
- 
- .close:hover,
- .close:focus {
-   color: rgb(94, 94, 94);
-   text-decoration: none;
-   cursor: pointer;
- }
- .modal-image-details{
-     margin-left: 1em;
-     width: 70%;
- }
- .modal-image-details > p{
-   font-size: 0.8rem;
- }
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.555);
+}
 
- .modal-image-details > p:first-of-type{
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+  display: flex;
+  text-align: left;
+}
+
+.modal-content > img {
+  width: 30%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(94, 94, 94);
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-image-details {
+  margin-left: 1em;
+  width: 70%;
+}
+.modal-image-details > p {
+  font-size: 0.8rem;
+}
+
+.modal-image-details > p:first-of-type {
   font-size: 1.2rem;
   width: 80%;
   font-weight: 500;
- }
+}

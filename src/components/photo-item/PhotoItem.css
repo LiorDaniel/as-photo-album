@@ -1,55 +1,51 @@
-.photo-item{
-    background-color: #eee;
-    background: rgb(37,72,100);
-    display: flex;
-    flex-direction: column;
-    
-    align-items: center;
-    max-width: 300px;
-    padding: 0.3em;
-    text-align: center;
-    box-shadow:4px 4px 6px 1px rgb(16, 39, 59);
-  }
+.photo-item {
+  background-color: #eee;
+  background: rgb(37, 72, 100);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  padding: 0.3em;
+  text-align: center;
+  box-shadow: 4px 4px 6px 1px rgb(16, 39, 59);
+}
 
-  .photo-item-top  {
-    background: rgb(52,89,121);
-    width: 100%;
-    
-    padding:0.5em 0;
-    }
+.photo-item-top {
+  background: rgb(52, 89, 121);
+  width: 100%;
+  padding: 0.5em 0;
+}
 
-    
-    .photo-item-bottom{
-        background:rgb(24,50,70);
-        width: 95%;
-        white-space: nowrap;
-        overflow: hidden !important;
-        text-overflow: ellipsis;
-        padding: 0.5em;
-        font-size: 0.8rem;
-        text-align: left;
-        color:rgb(64, 99, 129);
-    }
+.photo-item-bottom {
+  background: rgb(24, 50, 70);
+  width: 95%;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  padding: 0.5em;
+  font-size: 0.8rem;
+  text-align: left;
+  color: rgb(64, 99, 129);
+}
 
-  .photo-item-top > img {
-    width:18%;
-    height: 90%;
-    border-radius: 17px;
-    
-    }
+.photo-item-top > img {
+  width: 18%;
+  height: 90%;
+  border-radius: 17px;
+}
 
-    .photo-item-middle{
-        padding:1em;
-        font-size: 0.8rem;
-        color:rgb(79,115,148);
-    }
-    .photo-title{
-        display: inline-block;
-        width: 214px;
-        white-space: nowrap;
-        overflow: hidden !important;
-        text-overflow: ellipsis;
-        color:white;
-        font-weight: 500;
-        font-size: 1.1rem;
-    }
+.photo-item-middle {
+  padding: 1em;
+  font-size: 0.8rem;
+  color: rgb(79, 115, 148);
+}
+.photo-title {
+  display: inline-block;
+  width: 214px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  color: white;
+  font-weight: 500;
+  font-size: 1.1rem;
+}

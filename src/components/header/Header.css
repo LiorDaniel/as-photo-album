@@ -1,31 +1,30 @@
-.header{
-    
-    width: 97%;
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    transform: translate(-50%,0);
+.header {
+  width: 97%;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
-h1{
-    color:white;
-    font-weight: 300;
-    font-size: 1.5rem;
-    margin-bottom: 1em;
-    text-align: left;
+h1 {
+  color: white;
+  font-weight: 300;
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+  text-align: left;
 }
 
-.search-and-album{
-    display: flex;
+.search-and-album {
+  display: flex;
 }
 
-.current-album{
-    font-size: 0.8rem;
-    color:gray;
-    background-color: rgb(24,51,70);
-    text-align: center;
-    padding: 0.6em;
-    margin: 0;
-    margin-left: 1em;
-    height: fit-content;
+.current-album {
+  font-size: 0.8rem;
+  color: gray;
+  background-color: rgb(24, 51, 70);
+  text-align: center;
+  padding: 0.6em;
+  margin: 0;
+  margin-left: 1em;
+  height: fit-content;
 }
